@@ -55,30 +55,30 @@ def show_predict_page(name):
     options_mapping = {'Teen':1, 'Young Adult':2, 'Adult':0}
     Age = st.radio("Select an option Age : ", ('Teen', 'Young Adult', 'Adult'))
     Age = options_mapping[Age]
-    st.write("Numerical value:", Age)
+    #st.write("Numerical value:", Age)
 
     options_mapping = {'Others':5, 'Engineering':2, 'Business':0, 'Computer Science':1, 'Medical':4, 'Law':3}
     Course = st.radio("Select an option Course : ", ('Engineering', 'Business', 'Computer Science', 'Medical', 'Law','Others'))
     Course = options_mapping[Course]
-    st.write("Numerical value:", Course)
+    #st.write("Numerical value:", Course)
 
 
     options_mapping = {'Male':1, 'Female':0}
     Gender = st.radio("Select an option Gender : ", ('Male', 'Female'))
     Gender = options_mapping[Gender]
-    st.write("Numerical value:", Gender)
+    #st.write("Numerical value:", Gender)
 
     
     options_mapping = {'Low':1, 'Medium':2, 'High':0}
     CGPA = st.radio("Select an option CGPA : ", ('Low', 'Medium', 'High'))
     CGPA = options_mapping[CGPA]
-    st.write("Numerical value:", CGPA)
+    #st.write("Numerical value:", CGPA)
     
     #Semester_Credit_Load = st.slider("Semester Credit_Load  ", 1, 100, 1)
     options_mapping = {'Low':1, 'Medium':2, 'High':0}
     Semester_Credit_Load = st.radio("Select an option Semester_Credit_Load : ", ('Low', 'Medium', 'High'))
     Semester_Credit_Load = options_mapping[Semester_Credit_Load]
-    st.write("Numerical value:", Semester_Credit_Load)
+    #st.write("Numerical value:", Semester_Credit_Load)
         
     Depression_Score = st.slider("5. Depression Score  ", 0, 5, 0)
     
@@ -90,54 +90,54 @@ def show_predict_page(name):
     options_mapping = {'Good':1, 'Average':0, 'Poor':2}
     Sleep_Quality = st.radio("Select an option Sleep_Quality : ", ('Good', 'Average', 'Poor'))
     Sleep_Quality = options_mapping[Sleep_Quality]
-    st.write("Numerical value:", Sleep_Quality)
+    #st.write("Numerical value:", Sleep_Quality)
 
     
     options_mapping = {'Moderate':2, 'Low':1, 'High':0}
     Physical_Activity = st.radio("Select an option Physical_Activity : ", ( 'Low','Moderate', 'High'))
     Physical_Activity = options_mapping[Physical_Activity]
-    st.write("Numerical value:", Physical_Activity)
+    #st.write("Numerical value:", Physical_Activity)
     
 
     options_mapping = {'Good':1, 'Average':0, 'Poor':2}
     Diet_Quality = st.radio("Select an option Diet_Quality : ", ('Good', 'Average', 'Poor'))
     Diet_Quality = options_mapping[Diet_Quality]
-    st.write("Numerical value:", Diet_Quality)
+    #st.write("Numerical value:", Diet_Quality)
    
  
     options_mapping = {'Moderate':2, 'Low':1, 'High':0}
     Social_Support = st.radio("Select an option Social_Support : ", ( 'Low','Moderate', 'High'))
     Social_Support = options_mapping[Social_Support]
-    st.write("Numerical value:", Social_Support)
+    #st.write("Numerical value:", Social_Support)
 
     options_mapping = {'Married':1, 'Single':2,'In a Relationship':0}
     Relationship_Status = st.radio("Select an option Relationship_Status : ", ('Married', 'Single','In a Relationship'))
     Relationship_Status = options_mapping[Relationship_Status]
-    st.write("Numerical value:", Relationship_Status)
+    #st.write("Numerical value:", Relationship_Status)
 
     options_mapping = {'Moderate':2, 'Low':1, 'High':0}
     Substance_Use = st.radio("Select an option Substance_Use : ", ( 'Low','Moderate', 'High'))
     Substance_Use = options_mapping[Substance_Use]
-    st.write("Numerical value:", Substance_Use)
+    #st.write("Numerical value:", Substance_Use)
 
 
     options_mapping = {'Never':1, 'Occasionally':2,'Frequently':0}
     Counseling_Service_Use = st.radio("Select an option Counseling_Service_Use : ", ('Never', 'Occasionally','Frequently'))
     Counseling_Service_Use = options_mapping[Counseling_Service_Use]
-    st.write("Numerical value:", Counseling_Service_Use)
+    #st.write("Numerical value:", Counseling_Service_Use)
     
 
     options_mapping = {'Yes':0,'No':1}
     Family_History = st.radio("Select an option Family_History : ", ('Yes','No'))
     Family_History = options_mapping[Family_History]
-    st.write("Numerical value:", Family_History)
+    #st.write("Numerical value:", Family_History)
 
 
 
     options_mapping = {'Yes':0,'No':1}
     Chronic_Illness = st.radio("Select an option Chronic_Illness : ", ('Yes','No'))
     Chronic_Illness = options_mapping[Chronic_Illness]
-    st.write("Numerical value:", Chronic_Illness)
+    #st.write("Numerical value:", Chronic_Illness)
     
 
    
@@ -147,7 +147,7 @@ def show_predict_page(name):
     options_mapping = {'Moderate':2, 'Low':1, 'High':0}
     Extracurricular_Involvement = st.radio("Select an option Extracurricular_Involvement : ",( 'Low','Moderate', 'High'))
     Extracurricular_Involvement = options_mapping[Extracurricular_Involvement]
-    st.write("Numerical value:", Extracurricular_Involvement)
+    #st.write("Numerical value:", Extracurricular_Involvement)
     
     
 
@@ -156,12 +156,12 @@ def show_predict_page(name):
     options_mapping = {'On-Campus':1 ,'Off-Campus':0 ,'With Family':2}
     Residence_Type = st.radio("Select an option Residence_Type : ", ('On-Campus' ,'Off-Campus' ,'With Family'),key="Residence_Type")
     Residence_Type = options_mapping[Residence_Type]
-    st.write("Numerical value:", Residence_Type)
+    #st.write("Numerical value:", Residence_Type)
     
     
 
     if st.button("Calculate",key="calculate"):
-        X = np.array([[Age,Course,Gender,CGPA,Depression_Score,Anxiety_Score,Sleep_Quality,Physical_Activity,Diet_Quality,Social_Support,Relationship_Status,Substance_Use,Counseling_Service_Use,Family_History,Chronic_Illness,Financial_Stress,Extracurricular_Involvement,Semester_Credit_Load,Residence_Type]])
+        X = np.array([[Age,Course,Gender,CGPA,Depression_Score,Anxiety_Score,Sleep_Quality,Physical_Activity,Diet_Quality,Social_Support,Relationship_Status,Substance_Use,Counseling_Service_Use,Family_History,Chronic_Illness,Financial_Stress,Extracurricular_Involvement,Residence_Type]])
         #X = np.array([[19, 0, 0, 3.74, 0, 3, 1, 1, 0, 2, 0, 1, 2, 0, 0, 4, 0, 15, 1]])
         #st.title(X)
         # X[:, 1] = Course.transform([X[:, 1]])

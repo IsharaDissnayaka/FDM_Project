@@ -5,6 +5,7 @@ from StressAssessment import Stress_Assessment
 from Stress_management_tips_page import Stress_management_tips
 from Terms_and_Privacy_page import Terms_and_Privacy
 from Stress_factors_page import Stress_factors
+from explore_page import Explore
 
 
 page = st.sidebar.selectbox("Menu", ("Predict","Explore","Stress factors","Stress Assessment","Stress management tips","About Us"))
@@ -12,6 +13,8 @@ page = st.sidebar.selectbox("Menu", ("Predict","Explore","Stress factors","Stres
 if page == "Predict":
     print("hello")
     Predict()
+elif page == "Explore":
+    Explore()
 elif page == "About Us":
     aboutus()
 elif page == "Stress factors":
