@@ -1,5 +1,3 @@
-
-from itertools import count
 from sklearn.feature_selection import mutual_info_classif
 import streamlit as st
 import pandas as pd
@@ -8,13 +6,9 @@ import seaborn as sns
 import pickle
 from sklearn.metrics import confusion_matrix
 from sklearn.utils.multiclass import unique_labels
-# Import necessary libraries
-import pandas as pd
-from sklearn.model_selection import train_test_split, GridSearchCV
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score, classification_report
-from sklearn.preprocessing import LabelEncoder
-from sklearn.feature_selection import mutual_info_classif
+from PIL import Image
+
+
 
 
 def load_model():
@@ -43,13 +37,25 @@ Semester_Credit_Load= data["Semester_Credit_Load"]
 Residence_Type = data["Residence_Type"]
 
 
+    
+    
+
 def Explore():
     # Load the dataset
     data = pd.read_csv("student_mental_health_1.csv")
     # ... Your existing code for data preprocessing, model training, and evaluation ...
-
+    image = Image.open('img/logo2.png')
+    st.image(image,  caption='')
     # Create a Streamlit app
-    st.title("Machine Learning Model Evaluation")
+    st.markdown(
+            f'<div style="text-align: center;"><h1>Exploring What Drives Your Stress.</h1></div>',
+            unsafe_allow_html=True
+        )
+    st.markdown(
+        """<div style="text-align: Left;"><p>Welcome to our "Stress Factors" hub, a place where we break down the puzzle of what's been keeping your stress levels up. In this space, we've translated complex data into easy-to-digest visual aids, giving you a clear picture of what's affecting your stress.
+        </p></div>""",
+        unsafe_allow_html=True
+    )
 
     # Calculate summary statistics for your data
     summary_statistics = {
@@ -59,9 +65,9 @@ def Explore():
         # Add other statistics as needed
     }
 
-    # Display the calculated summary statistics
-    st.write("Summary Statistics:")
-    st.write(summary_statistics)
+    # # Display the calculated summary statistics
+    # st.write("Summary Statistics:")
+    # st.write(summary_statistics)
 
     # Display a bar chart of Stress Levels
     st.subheader("Stress Level Distribution.")
@@ -77,21 +83,11 @@ def Explore():
     fig, ax = plt.subplots()
     sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f", ax=ax)
     st.pyplot(fig)
-   
-   
-
-    # # Plot a confusion matrix
-    # st.subheader("Confusion Matrix")
-    # cm = confusion_matrix(y_test, y_pred)
-    # classes = unique_labels(y_test, y_pred)
-    # plt.figure(figsize=(6, 6))
-    # sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=classes, yticklabels=classes)
-    # plt.xlabel('Predicted')
-    # plt.ylabel('Actual')
-    # st.pyplot()
-
-    # # Display model evaluation metrics
-    # st.subheader("Model Evaluation")
-    # st.write("Model Accuracy:", accuracy)
-    # st.write("Best Hyperparameters:", best_params)
-    # st.write("Classification Report:\n", report)
+    
+    
+    st.markdown(
+            """<div style="text-align: Left;"><p>Here, you'll find interactive visuals that show how different parts of your life, both academic and personal, play into your stress levels. By uncovering these links, you'll be better equipped to make decisions that boost your well-being. This user-friendly tool helps you spot stress triggers, tackle stress head-on, and work towards a calmer and more balanced you. Dive into "Stress Factors" today to seize control of your emotional well-being.
+    </p></div>""",
+            unsafe_allow_html=True
+        )
+    

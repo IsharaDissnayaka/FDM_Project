@@ -20,9 +20,9 @@ Our mission is simple: to enhance your mental well-being throughout your univers
 
 <b>What We Offer:</b>
 
-1.	Stress Assessment: Our tool evaluates your stress levels, offering insights into what might be causing your stress.
+Stress Assessment: Our tool evaluates your stress levels, offering insights into what might be causing your stress.
 
-2.	Stress Management Tips: We provide expert tips to help you manage stress effectively, from mindfulness techniques to lifestyle adjustments.
+Stress Management Tips: We provide expert tips to help you manage stress effectively, from mindfulness techniques to lifestyle adjustments.
 
 <b>Who We Are:</b>
 
@@ -34,7 +34,7 @@ Your privacy is a priority. We've implemented strong security measures to protec
 
 <b>Join Us on This Journey:</b>
 
-Thank you for choosing [Your App Name] to make your university life less stressful and more fulfilling. Got questions or feedback? Reach out anytime. Your well-being is our top concern. Together, we'll navigate university life and help you make the most of it.
+Thank you for choosing MindMoodMeter to make your university life less stressful and more fulfilling. Got questions or feedback? Reach out anytime. Your well-being is our top concern. Together, we'll navigate university life and help you make the most of it.
 </p></div>""",
         unsafe_allow_html=True
     )                         
